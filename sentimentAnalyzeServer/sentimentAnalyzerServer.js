@@ -142,7 +142,7 @@ app.get("/text/sentiment", (req,res) => {
         naturalLanguageUnderstanding.analyze(analyzeParams)
             .then(analysisResults => {
     //     //Please refer to the image to see the order of retrieval
-    return res.send(analysisResults.result.keywords[0].emotion,null,2);
+    return res.send(analysisResults.result.keywords[0].sentiment,null,2);
 })
         .catch(err => {
     return res.send("Could not do desired operation "+err);
